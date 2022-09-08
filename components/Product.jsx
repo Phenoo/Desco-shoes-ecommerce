@@ -1,9 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
+import {  AiOutlineHeart } from 'react-icons/ai'
+import { FaHeart } from 'react-icons/fa'
+
 
 import { urlFor } from '../lib/client';
 
 const Product = ({ product: { image, name, slug, price } }) => {
+  
   return (
     <div>
       <Link href={`/product/${slug.current}`}>
@@ -18,7 +22,14 @@ const Product = ({ product: { image, name, slug, price } }) => {
           </div>
           <div className="stock-text">
             <h6 className="name">{name}</h6>
-            <p className="price">${price}</p>
+            <div className="stock-footer">
+              <p className="price">${price}</p>
+              <div className="stock-svg">
+                <span>
+                  <AiOutlineHeart />
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </Link>

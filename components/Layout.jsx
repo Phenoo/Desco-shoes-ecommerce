@@ -1,6 +1,8 @@
 import React from 'react'
 import Footer from './Footer'
 import Navbar from './Navbar'
+import Contact from '../components/Contact';
+
 
 import Head from 'next/head'
 
@@ -16,6 +18,7 @@ const Layout = ({children}) => {
         <main className="main-container">
           {children}
         </main>
+        <Contact />
         <footer>
           <Footer />
         </footer>

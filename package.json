@@ -19,7 +19,8 @@
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.3.0",
     "react-icons": "^4.4.0",
-    "sass": "^1.54.5"
+    "sass": "^1.54.5",
+    "stripe": "^10.8.0"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.18.6",
