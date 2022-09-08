@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Livvic&family=Poppins&family=Roboto&family=Rubik+Marker+Hatch&display=swap');
 ::-webkit-scrollbar {
     width: 0px;
 }
@@ -55,7 +56,7 @@ span.text-red {
 }
 
 .cart-icon {
-    font-size: 25px;
+    font-size: 2rem;
     color: gray;
     cursor: pointer;
     position: relative;
