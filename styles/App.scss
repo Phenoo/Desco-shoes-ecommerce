@@ -27,7 +27,7 @@ html {
 
 body {
     overflow-x: hidden;
-    background-color: #fcfcfc;
+    background-color: #0d7133;
     font-family: 'Jost', sans-serif;
 }
 
@@ -88,7 +88,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #808080;
+    color: #ddd;
     margin-top: 3rem;
     .brand {
         display: flex;
@@ -107,36 +107,11 @@ section {
 .products-heading {
     margin-top: 3rem;
     text-align: center;
+    color: #ddd;
     .tophead {
         font-size: 2rem;
         text-transform: capitalize;
         font-family: 'Livvic', serif;
-    }
-}
-
-.card {
-    background: #fff;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem;
-    width: 200px;
-    height: 250px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    &:hover {
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.32);
-    }
-    .name {
-        font-size: 1rem;
-        font-family: 'Jost';
-    }
-    .price {
-        color: $darkblue;
-        font-weight: 700;
     }
 }
 
@@ -211,7 +186,7 @@ section {
     flex-direction: column;
     width: 300px;
     height: 330px;
-    // background: #ddd;
+    background: #ddd;
     cursor: pointer;
     padding: 0.7rem;
     border-radius: 10px;
@@ -222,7 +197,7 @@ section {
     }
     .stock-image {
         height: 190px;
-        width: 275px;
+        width: 100%;
         display: flex;
         align-items: center;
     }
@@ -238,6 +213,7 @@ section {
         font-family: "Roboto";
         text-transform: uppercase;
         font-size: 1rem;
+        text-align: center;
     }
     p {
         font-family: "Jost";
@@ -281,7 +257,7 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    color: #324d67;
+    color: #ddd;
     margin: 2rem 0;
     .product-detail-desc {
         h1 {
@@ -295,7 +271,7 @@ section {
             .trans {
                 background: none;
                 color: #fc3b3b;
-                border: 1px solid #fc3b3b;
+                border: 2px solid #fc3b3b;
                 &:hover {
                     background: #fc3b3b;
                     color: #fff;
@@ -422,12 +398,12 @@ section {
 footer {
     background: #000;
     color: #fff;
-    padding: 2rem 0 1rem;
+    padding: 1rem 0 0.3rem;
     .footer-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
-        margin-top: 4rem;
+        margin-top: 3rem;
         h4 {
             font-size: 1.4rem;
             text-transform: capitalize;
@@ -455,6 +431,8 @@ footer {
     .copy {
         margin-top: 1rem;
         text-align: center;
+        padding: 0.5rem;
+        border-top: 1px solid #ddd;
     }
 }
 
@@ -521,6 +499,9 @@ footer {
         .tophead {
             font-size: 1.4rem;
         }
+        p {
+            text-transform: capitalize;
+        }
     }
     .about-container {
         .about-text {
@@ -580,6 +561,51 @@ footer {
         font-size: 0.6rem;
         padding: 0.5rem;
     }
+    .stocks-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        place-items: center;
+    }
+    .stock {
+        width: 155px;
+        height: 190px;
+        cursor: pointer;
+        padding: 0.7rem;
+        margin-bottom: 1rem;
+        .stock-image {
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .stock-text {
+            margin-top: 10px;
+        }
+        h6 {
+            font-size: 0.45rem;
+        }
+        p {
+            font-size: 0.6rem;
+        }
+        .stock-svg {
+            svg {
+                font-size: 1rem;
+            }
+        }
+        .instock {
+            background: #0bdd31;
+            text-align: center;
+            color: #fff;
+            width: 40px;
+            font-size: 0.5rem;
+            text-transform: capitalize;
+            padding: 0.1rem;
+            border-radius: 15px;
+            margin-bottom: 5px;
+        }
+    }
     .product-detail-container {
         .image-container {
             display: flex;
@@ -602,6 +628,13 @@ footer {
     .cart-container {
         width: 80%;
     }
+    .product-detail-container {
+        .product-detail-desc {
+            h1 {
+                font-size: 1.25rem;
+            }
+        }
+    }
     .contact-header {
         .contact-container {
             .form-input {
@@ -620,21 +653,22 @@ footer {
             grid-template-columns: 100%;
         }
     }
-    .stocks-container {
-        grid-template-columns: 100%;
-    }
 }
 
 @media screen and (max-width: 390px) {
     .cart-container {
         width: 90%;
     }
+    section {
+        width: 92.5%;
+    }
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 345px) {
     .stocks-container {
-        .stock {
-            width: 100%;
-        }
+        grid-template-columns: 100%;
+    }
+    .stock {
+        width: 200px;
     }
 }

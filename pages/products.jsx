@@ -7,8 +7,8 @@ const products = ({products}) => {
   return (
     <section>
         <div className='products-heading'>
-        <h2>Products</h2>
-        <p>Shoes of many variations</p>
+        <h2>Our Products</h2>
+        <p>meet our great selection of finest shoes</p>
       </div>
       <div className="stocks-container">
         {

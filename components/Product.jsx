@@ -10,38 +10,44 @@ import { toast } from 'react-hot-toast';
 
 
 const Product = ({ product: { image, name, slug, price } }) => {
-  const [like, setLike] = useState(false)
+  const [like, setLike] = useState(true)
 
   const handleLike = () => {
-    setLike(!like);
-    toast.success(`added to the favorites`);
+    if(!like){
+      setLike(true)
+      toast.error(`unadded to the favorites`);
+    }
+    else if(like){
+      setLike(false)
+      toast.success(`added to the favorites`);
+    }
   }
   
   return (
     <div>
-      <Link href={`/product/${slug.current}`}>
         <div className="stock">
           <span className="instock">
               in stock
           </span>
-          <div className="stock-image">
-            <img 
-              src={urlFor(image && image[0])}
-            />
-          </div>
+          <Link href={`/product/${slug.current}`}>
+            <div className="stock-image">
+              <img 
+                src={urlFor(image && image[0])}
+              />
+            </div>
+          </Link>
           <div className="stock-text">
             <h6 className="name">{name}</h6>
             <div className="stock-footer">
               <p className="price">${price}</p>
               <div className="stock-svg">
                 <span onClick={handleLike}>
-                  {like ? <FaHeart /> : <AiOutlineHeart /> }
+                  {like ?  <AiOutlineHeart /> : <FaHeart /> }
                 </span>
               </div>
             </div>
           </div>
         </div>
-      </Link>
     </div>
   )
 }
