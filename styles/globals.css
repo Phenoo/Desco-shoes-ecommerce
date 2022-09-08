@@ -337,7 +337,7 @@ span.text-red {
 
 .success,
 .cancel {
-    width: 1000px;
+    width: 700px;
     margin: auto;
     margin-top: 160px;
     background-color: #dcdcdc;
@@ -517,5 +517,40 @@ span.text-red {
     }
     .empty-cart h3 {
         font-size: 1rem;
+    }
+    .success,
+    .cancel {
+        width: 300px;
+        margin-top: 100px;
+        padding: 20px;
+    }
+    .item-desc .flex {
+        width: 180px;
+    }
+}
+
+@media screen and (max-width:390px) {
+    .item-desc .flex {
+        width: 150px;
+    }
+    .quantity-desc span {
+        font-size: 12px;
+        padding: 6px 10px;
+        cursor: pointer;
+    }
+    .quantity-desc .minus {
+        border-right: 1px solid gray;
+        color: #f02d34;
+    }
+    .quantity-desc .num {
+        border-right: 1px solid gray;
+        font-size: 16px;
+    }
+    .success,
+    .cancel {
+        width: 90%;
+    }
+    .success .email-msg {
+        font-size: 13px;
     }
 }

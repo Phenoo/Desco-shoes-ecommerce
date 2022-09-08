@@ -600,7 +600,7 @@ footer {
         }
     }
     .cart-container {
-        width: 300px;
+        width: 80%;
     }
     .contact-header {
         .contact-container {
@@ -622,6 +622,12 @@ footer {
     }
     .stocks-container {
         grid-template-columns: 100%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .cart-container {
+        width: 90%;
     }
 }
 
