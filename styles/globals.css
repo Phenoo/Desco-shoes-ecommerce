@@ -11,7 +11,7 @@ a {
 .navbar-container {
     display: flex;
     justify-content: space-between;
-    margin: 6px 18px;
+    margin: 6px 0;
     position: relative;
 }
 
@@ -56,7 +56,7 @@ span.text-red {
 }
 
 .cart-icon {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: gray;
     cursor: pointer;
     position: relative;
@@ -73,11 +73,11 @@ span.text-red {
 .cart-item-qty {
     position: absolute;
     right: -8px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #eee;
     background-color: #f02d34;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     font-weight: 600;
 }
@@ -98,7 +98,7 @@ span.text-red {
     width: 600px;
     background-color: white;
     float: right;
-    padding: 40px 10px;
+    padding: 40px 0;
     position: relative;
 }
 
@@ -168,14 +168,6 @@ span.text-red {
     margin-top: 60px;
 }
 
-.flex h5 {
-    font-size: 24px;
-}
-
-.flex h4 {
-    font-size: 20px;
-}
-
 .total {
     display: flex;
     justify-content: space-between;
@@ -198,17 +190,19 @@ span.text-red {
     bottom: 12px;
     right: 5px;
     width: 100%;
-    padding: 30px 65px;
+    padding: 30px 60px;
+}
+
+.cart-bottom .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px 12px;
+    padding: 10px 20px;
     border-radius: 15px;
-    border: none;
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 0.8rem;
     margin-top: 40px;
     text-transform: uppercase;
     background-color: #f53b3b;
@@ -513,10 +507,6 @@ span.text-red {
     }
     .success h2 {
         font-size: 17px;
-    }
-    .btn-container {
-        width: 300px;
-        margin: auto;
     }
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import {  AiOutlineHeart } from 'react-icons/ai'
 import { FaHeart } from 'react-icons/fa'
@@ -6,7 +6,16 @@ import { FaHeart } from 'react-icons/fa'
 
 import { urlFor } from '../lib/client';
 
+import { toast } from 'react-hot-toast';
+
+
 const Product = ({ product: { image, name, slug, price } }) => {
+  const [like, setLike] = useState(false)
+
+  const handleLike = () => {
+    setLike(!like);
+    toast.success(`added to the favorites`);
+  }
   
   return (
     <div>
@@ -25,8 +34,8 @@ const Product = ({ product: { image, name, slug, price } }) => {
             <div className="stock-footer">
               <p className="price">${price}</p>
               <div className="stock-svg">
-                <span>
-                  <AiOutlineHeart />
+                <span onClick={handleLike}>
+                  {like ? <FaHeart /> : <AiOutlineHeart /> }
                 </span>
               </div>
             </div>

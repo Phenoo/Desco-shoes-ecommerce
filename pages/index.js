@@ -14,10 +14,10 @@ const Home = ({products, bannerData}) => {
     <>
       {/* <HeroBanner heroBanner={bannerData.length && bannerData[0]} /> */}
       <HomeContainer />
-      <Brands />
+      <Brands /> 
       <div className='products-heading'>
         <h2 className='tophead'>Best Selling Products</h2>
-        <p>Shoes of many variations</p>
+        <p>meet our great selection of finest shoes</p>
       </div>
       <section className='container'>
         <div className='stocks-container'>
