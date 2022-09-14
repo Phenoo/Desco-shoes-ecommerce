@@ -9,7 +9,7 @@ const ProductDetails = ({ product, products }) => {
   const {image, name, details, price } = product;
   const [index, setIndex] = useState(0);
   const {decQty, incQty, qty, onAdd, setShowCart} = useStateContext();
-  const filterItems = products?.filter((item, index) => index < 4);
+  // const filterItems = products?.filter((item, index) => index < 4);
 
 
   const handleBuyNow = () => {
@@ -76,16 +76,6 @@ const ProductDetails = ({ product, products }) => {
           </div>
           </div>
       </div>
-      {/* <div className="maylike-products-wrapper">
-          <h2>You may also like</h2>
-          <div className="marquee">
-            <div className="maylike-products-container track">
-              {filterItems.map((item) => (
-                <Product key={item._id} product={item} />
-              ))}
-            </div>
-          </div>
-      </div> */}
     </section>
   )
 }

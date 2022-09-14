@@ -123,6 +123,7 @@ section {
     width: 100%;
     height: 100%;
     margin: 2rem 0;
+    color: #ddd;
     .about-text {
         font-family: 'Poppins';
         width: 60%;
@@ -185,7 +186,7 @@ section {
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: 330px;
+    height: 350px;
     background: #ddd;
     cursor: pointer;
     padding: 0.7rem;
@@ -221,6 +222,7 @@ section {
         font-weight: 600;
         color: #fc3b3b;
         margin: 5px 0;
+        text-align: center;
     }
     .stock-footer {
         display: flex;
@@ -238,6 +240,11 @@ section {
                 transition: all 0.3s ease;
                 transform: scale(1.1);
             }
+        }
+    }
+    .buy {
+        svg {
+            color: #111;
         }
     }
     .instock {
@@ -468,6 +475,9 @@ footer {
             }
         }
     }
+    .cart-container {
+        width: 85%;
+    }
     .product-detail-container {
         grid-template-columns: 100%;
     }
@@ -569,7 +579,7 @@ footer {
     }
     .stock {
         width: 155px;
-        height: 190px;
+        height: 210px;
         cursor: pointer;
         padding: 0.7rem;
         margin-bottom: 1rem;

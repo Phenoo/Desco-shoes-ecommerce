@@ -7,7 +7,7 @@ import HomeContainer from '../components/HomeContainer';
 import About from '../components/About';
 
 
-const Home = ({products, bannerData}) => {
+const Home = ({products}) => {
   const filterItems = products?.filter((item, index) => index < 9);
 
   return (
@@ -44,11 +44,9 @@ export const getServerSideProps = async () => {
   const query = '*[_type == "product"]';
   const products = await client.fetch(query);
 
-  const bannerQuery = '*[_type == "banner"]';
-  const bannerData = await client.fetch(bannerQuery);
-  
+
   return{
-    props: {products, bannerData}
+    props: {products}
   }
 }
 export default Home
