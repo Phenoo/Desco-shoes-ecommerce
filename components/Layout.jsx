@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
 import Navbar from './Navbar'
-import Contact from '../components/Contact';
+import Subscribe from './Subscribe';
 
 
 import Head from 'next/head'
@@ -12,13 +12,15 @@ const Layout = ({children}) => {
       <Head>
         <title>Desco Store</title>
       </Head>
-      <header>
-        <Navbar />
-      </header>
+      <nav>
+        <header>
+          <Navbar />
+        </header>
+      </nav>
         <main className="main-container">
           {children}
         </main>
-        <Contact />
+        <Subscribe />
         <footer>
           <Footer />
         </footer>

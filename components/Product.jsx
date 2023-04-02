@@ -27,7 +27,6 @@ const Product = ({ product: { image, name, slug, price }, product }) => {
   }
   
   return (
-    <div>
         <div className="stock">
           <span className="instock">
               in stock
@@ -39,22 +38,32 @@ const Product = ({ product: { image, name, slug, price }, product }) => {
               />
             </div>
           </Link>
+          <div className="divider" />
           <div className="stock-text">
-            <h6 className="name">{name}</h6>
-            <p className="price">${price}</p>
-            <div className="stock-footer">
+            <div className="space-between">
+              <h4 className="name">{name}</h4>
+              <p className="price">${price}</p>
+            </div>
+            <h6>
+              Size: L
+            </h6>
+          <div className="divider" />
+            <div className="space-between">
               <div className="stock-svg buy" onClick={() => onAdd(product, qty)}>
-                <AiOutlineShoppingCart />
+                <button>
+                  buy now
+                </button>
               </div>
-              <div className="stock-svg">
-                <span onClick={handleLike}>
-                  {like ?  <AiOutlineHeart /> : <FaHeart /> }
-                </span>
+              <div className="stock-svg ">
+                <button className='plus' onClick={handleLike}>
+                  <span>
+                    {like ?  <AiOutlineHeart /> : <FaHeart /> }
+                  </span>
+                </button>
               </div>
             </div>
           </div>
         </div>
-    </div>
   )
 }
 

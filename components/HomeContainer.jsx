@@ -1,18 +1,40 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 const HomeContainer = () => {
   return (
-    <section className="home-container">
-        <div className="home-text">
-          <h6>sports</h6>
-          <h4>Easy and reliable purchase</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, quae quisquam. Illum dolorum tenetur blanditiis est quisquam expedita iusto saepe!</p>
-          <Link href='/products'>
-            <button className="see-more">shop now</button>
-          </Link>
-      </div>
-    </section>
+    <div className="home">
+
+      <section>
+        <div className="home-container">
+
+          <div className="home-text">
+            <h2>
+              clito'n fit shoes
+            </h2>
+
+            <h4>Style goes with your personality</h4>
+            <Link href='/products'>
+              <button className="button">buy now</button>
+            </Link>
+        </div>
+        <div className='home-image'>
+          <Image src="https://source.unsplash.com/JzJSybPFb3s" 
+            width={500}
+            height={250}
+            className='image'
+            alt='home' />
+          <div className="star">
+            50%
+          </div>
+        </div>
+    </div>
+      </section>
+    <div className="overlay"></div>
+
+    </div>
+
   )
 }
 

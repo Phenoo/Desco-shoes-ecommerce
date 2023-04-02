@@ -3,21 +3,24 @@ import React from 'react'
 import { Product } from "../components";
 import {client} from '../lib/client'
 
-const products = ({products}) => {
+const Products = ({products}) => {
   return (
+    <div className='products'>
+
     <section>
-        <div className='products-heading'>
+        <div className='heading'>
         <h2>Our Products</h2>
-        <p>meet our great selection of finest shoes</p>
       </div>
-      <div className="stocks-container">
+      <div className="products-container">
         {
           products?.map(
-            (product) => <Product key={product.id} product={product} />
+            (product) => <Product key={product._id} product={product} />
           )
         }
       </div>
     </section>
+    </div>
+
   )
 }
 
@@ -33,6 +36,6 @@ export const getServerSideProps = async () => {
     props: {products}
   }
 }
-export default products
+export default Products
 
 

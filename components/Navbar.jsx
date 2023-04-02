@@ -4,6 +4,7 @@ import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { useStateContext} from '../context/StateContext';
 
 import Cart  from './Cart';
+import Logo from './Logo/Logo';
 
 
 const Navbar = () => {
@@ -12,18 +13,39 @@ const Navbar = () => {
   return (
     <section>
       <div className="navbar-container">
-        <Link href="/">
-          <div className="logo">
-            <h3>desco</h3>
-          </div>
-        </Link>
-        <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
-          <AiOutlineShoppingCart />
-          <span className="cart-item-qty">{totalQuantities}</span>
-        </button>
+        <div>
+          <Logo />
+        </div>
+        <div>
+          <ul>
+            <li>
+              <Link href="/products">
+                shop
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                search
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                contact
+              </Link>
+            </li>
+            <li>
+              <Link href='/cart'>
+                cart
+                {/* {totalQuantities} */}
+              </Link>
+            </li>
+          </ul>
+        </div>
+
 
         {showCart && <Cart />}
       </div>
+      <div className="divider"></div>
     </section>
   )
 }
