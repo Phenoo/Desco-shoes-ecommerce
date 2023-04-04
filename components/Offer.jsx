@@ -39,7 +39,7 @@ const Offer = () => {
     <div className='offer'>
       <section>
       <div className="grid-offer">
-        <div>
+        <div className='offer-image'>
           <Image src='https://source.unsplash.com/PqbL_mxmaUE' width={350} height={450} alt='shoes'/>
         </div>
         <div className="offer-text">

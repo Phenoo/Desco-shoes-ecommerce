@@ -1,4 +1,4 @@
-@import url("https://api.fontshare.com/v2/css?f[]=expose@700,400&f[]=supreme@400&f[]=tanker@400&f[]=zodiak@400&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=expose@700,400&f[]=supreme@400&f[]=tanker@400&f[]=zodiak@400&f[]=telma@300&display=swap");
 * {
     padding: 0;
     margin: 0;
@@ -9,9 +9,6 @@
     outline: none;
 }
 
-.logo h3{
-    font-family: 'Zodiak', sans-serif;
-}
 
  h2, h1{
     font-family: 'Tanker', sans-serif;
@@ -21,7 +18,7 @@ a, li, button, h4{
     font-family: 'Expose', sans-serif;
 }
 
-p, h6, h5, span, div{
+p, h6, h5, span, div, input{
     font-family: 'Supreme', sans-serif;
 }
 
@@ -33,7 +30,6 @@ body {
     overflow-x: hidden;
     background-color: #e6e6e4;
     color: #111;
-    border: 6px solid #111;
 }
 
 nav{
@@ -42,11 +38,13 @@ nav{
 a {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
 }
 
 button, input, select, textarea{
     outline: none;
     border: none;
+    background: none;
 }
 
 button{
@@ -73,7 +71,23 @@ button{
     width: auto;
 }
 
-.reSwiper .swiper-pagination-bullet-active{
+.reSwiper .swiper-pagination-bullet-active, .mySwiper .swiper-pagination-bullet-active{
     background: #000;
 }
 
+.seSwiper{
+    height: 500px;
+    width: 100%;
+}
+
+
+.seSwiper .swiper-slide{
+    width: auto;
+}
+
+
+@keyframes spin {
+    100%{
+        transform: rotate(1turn);
+    }
+}

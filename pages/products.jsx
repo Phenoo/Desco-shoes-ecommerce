@@ -6,11 +6,10 @@ import {client} from '../lib/client'
 const Products = ({products}) => {
   return (
     <div className='products'>
-
-    <section>
-        <div className='heading'>
-        <h2>Our Products</h2>
+        <div className='hero-heading'>
+        <h2>shop shoes</h2>
       </div>
+    <section>
       <div className="products-container">
         {
           products?.map(

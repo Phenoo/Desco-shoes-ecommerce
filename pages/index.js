@@ -7,10 +7,10 @@ import Offer from '../components/Offer';
 import Featured from '../components/Featured/Featured';
 import Review from '../components/Review';
 import Overflow from '../components/Overflow';
+import SearchContainer from '../components/SearchContainer';
 
 
 const Home = ({products}) => {
-
   return (
     <>
       <HomeContainer />
@@ -20,6 +20,7 @@ const Home = ({products}) => {
       <Offer />
       <Review />
       <Overflow />
+     
     </>
   )
 }

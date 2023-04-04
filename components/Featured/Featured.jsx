@@ -1,14 +1,13 @@
 import React from 'react'
 import Product from '../Product';
 import Link from 'next/link';
-import { FaArrowRight } from 'react-icons/fa';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Styles must use direct files imports
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from 'swiper';
+import { Pagination, Autoplay } from 'swiper';
 
 const Featured = ({products}) => {
   const filterItems = products?.filter((item, index) => index < 6);
@@ -26,12 +25,19 @@ const Featured = ({products}) => {
             <Swiper
                 slidesPerView={"auto"}
                 spaceBetween={40}
-                modules={[Pagination]}
+                pagination={{
+                  clickable: true,
+                }}
+                autoplay={{
+                  delay: 2000,
+                  disableOnInteraction: false,
+                }}
+                modules={[Pagination, Autoplay ]}
                 className="mySwiper"
                 >
             {
                 filterItems?.map(
-                  (product) => <SwiperSlide>
+                  (product) => <SwiperSlide key={product._id}>
                         <Product key={product._id} product={product} />
                     </SwiperSlide>
                 )
